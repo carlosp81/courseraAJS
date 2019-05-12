@@ -12,13 +12,21 @@
 
         $scope.ShowMessage = function ShowMsg () {
             let itemsNumber = $scope.dishes.split(',').length;
-            if ($scope.msg === ''){
-                return $scope.msg = 'Please enter data first';
+            if ($scope.dishes === ''){
+                $scope.msg = 'Please enter data first';
             }else if(itemsNumber < 3){
-                return $scope.msg = 'Enjoy!'
+                $scope.msg = 'Enjoy!';
+                $scope.ResetMsg();
             }else {
-                return $scope.msg = 'Too Much!'
+                $scope.msg = 'Too Much!';
+                $scope.ResetMsg();
             };
+        }
+        $scope.ResetMsg = function Reset () {
+            if ($scope.msg) {
+                $scope.dishes = '';
+                // $scope.msg = 'Please enter data first';
+            }
         }
     }
 
