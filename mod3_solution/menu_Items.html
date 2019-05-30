@@ -1,0 +1,42 @@
+
+ 
+    
+            
+<ol>
+    <li ng-repeat="q in item.items track by $index" class="menu-list row list-group-item panel-primary">
+      <h5><b>Name:</b> {{ q.name }}</h5> 
+      <h5><b>Description:</b> {{ q.dc }}</h5>
+      <div>        
+        <button ng-click="item.onRemove({index: $index});">Don't want this one!</button>
+      </div>
+      
+    </li>
+</ol>
+            
+<!-- <ol>
+  <li ng-repeat="prueba in item.found" class="menu-list row list-group-item panel-primary" ng-if="!item.show">
+    {{ prueba.name }} 
+    <button ng-click="item.onRemove({index: $index});">Remove Item</button>
+  </li>
+</ol> -->
+
+<!-- <table class="table table-dark">
+  <tbody>
+    <tr>
+      
+
+      <td>
+          <ol>
+              <li ng-repeat="getFoundItem in item.found">
+                {{ getFoundItem.name }} 
+                <button ng-click="item.onRemove({index: $index});">Remove Item</button>
+              </li>
+          </ol>
+      </td>
+      
+      
+    </tr>
+  </tbody>
+</table> -->
+
+
