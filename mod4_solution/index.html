@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Week 4</title>
+</head>
+<body ng-app='MenuApp'>
+
+    <ui-view></ui-view>
+
+    <!-- Libreries -->
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+    <!-- Modules -->
+    <script src="app/Modules/menuapp.module.js"></script>
+    <script src="app/Modules/data.module.js"></script>
+    <!-- Services -->
+    <script src="app/Services/menudata.service.js"></script>
+    <!-- Components -->
+    <script src="app/Components/Categories/categories.component.js"></script>
+    <script src="app/Components/Categories/Categories.controller.js"></script>
+    <script src="app/Components/Items/items.component.js"></script>
+    <script src="app/Components/Items/items.controller.js"></script>
+    <!-- Routes -->
+    <script src="app/routes.js"></script>
+    
+</body>
+</html>

@@ -3,15 +3,23 @@
     
             
 <ol>
-    <li ng-repeat="q in item.items track by $index" class="menu-list row list-group-item panel-primary">
+  <li ng-repeat="q in item.items track by $index" class="menu-list row list-group-item panel-primary">
+    
+    <div class="alert alert-warning" role="alert" ng-if="item.items === 0">
+      Item not Found in this Menu !
+    </div>
       <h5><b>Name:</b> {{ q.name }}</h5> 
       <h5><b>Description:</b> {{ q.dc }}</h5>
+      
       <div>        
         <button ng-click="item.onRemove({index: $index});">Don't want this one!</button>
       </div>
       
     </li>
 </ol>
+
+
+
             
 <!-- <ol>
   <li ng-repeat="prueba in item.found" class="menu-list row list-group-item panel-primary" ng-if="!item.show">

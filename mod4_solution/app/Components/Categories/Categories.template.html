@@ -1,0 +1,18 @@
+<div class="categories" id="colorstrip">
+    
+  <h1>MENU CATEGORIES</h1>
+    
+    <ul>
+      <li ng-repeat='category in catList.categories'>
+          <span>
+
+            <a ui-sref='items({categoryShortName: category.short_name})' class='show-more'>
+              {{ category.name }}
+            </a>
+
+          </span>
+
+      </li>
+    </ul>
+
+</div>

@@ -24,6 +24,10 @@ function foundItemsDirective () {
 
 function foundItemsDirectiveController () {
     let item = this;
+
+    item.nf = () => {
+        return item.items !== 'undefined' || item.items.length === 0
+    }
 }
 
 
@@ -45,7 +49,9 @@ function NarrowItDownController (MenuSearchService) {
         if (term) {
             MenuSearchService.getMatchedMenuItems(term);
             itemMain.menu = MenuSearchService.getFi();
-        } 
+        } else {
+            term = '';
+        }
     }
     
 }
@@ -59,7 +65,6 @@ function MenuSearchService ($http, API_BASE) {
 
     let foundItems = [];
 
-    
     service.getMatchedMenuItems = (searchT) => {
         
         
@@ -119,7 +124,6 @@ function MenuSearchService ($http, API_BASE) {
     service.removeItem = (itemIndex) => {
         foundItems.splice(itemIndex, 1);
     };
-    
 }
 
 })()
